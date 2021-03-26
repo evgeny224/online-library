@@ -1,0 +1,49 @@
+.footer_wrapper{
+    margin: 0 auto;
+    height: 270px;
+    background-color: #FFECB3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1140px;
+}
+
+.footer_email{
+    font-family: 'Noto Serif', serif;
+    font-size: 16px;
+    margin-top: 106px;
+    margin-left: 54px;
+}
+
+.footer_social{
+    font-family: 'Noto Serif', serif;
+    font-size: 16px;
+    margin-top: 77px;
+    margin-left: 70px;
+}
+
+.footer_agreement{
+    font-family: 'Noto Serif', serif;
+    font-size: 16px;
+    margin-top: 106px;
+    margin-left: 78px;
+    text-decoration: none;
+    color: black;
+}
+
+.footer_agreement:hover{
+    color: firebrick;
+    text-decoration: underline;
+}
+
+.vk{
+    margin-top: 31px;
+    margin-left: 64px;
+}
+
+.facebook{
+    margin-left: 69px;
+}
+
+.youtube{
+    margin-left: 69px;
+}

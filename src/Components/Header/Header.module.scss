@@ -1,0 +1,49 @@
+.header_wrapper{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    max-width: 1140px;
+    background-color: #FFECB3;
+    border-bottom: 2px solid currentColor;
+    box-shadow: 0 6px 4px -4px rgb(0, 0, 0 / 20%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0;
+    height: 65px;
+    margin: 0 auto;
+}
+
+.header_input{
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+
+.header_input:hover{
+    color: firebrick;
+    text-decoration: underline;
+}
+
+.header_info{
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+
+.header_info:hover{
+    color: firebrick;
+    text-decoration: underline;
+}
+
+.header_library{
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+
+.header_library:hover{
+    color: firebrick;
+    text-decoration: underline;
+}
+
