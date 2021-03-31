@@ -1,18 +1,14 @@
 
 import React, { FC } from "react";
-import Footer from "../Footer";
-import Header from "../Header";
 import AuthForm from "./AuthForm";
-import style from "./AuthPage.module.scss";
+import PageWrapper from "../Common/PageWrapper";
 
 const AuthPage: FC = () => {
   return (
     <>
-      <div className={style["auth-page_wrapper"]}>
-        <Header />
+      <PageWrapper>
         <AuthForm />
-        <Footer />
-      </div>
+      </PageWrapper>
     </>
   );
 };

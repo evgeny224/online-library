@@ -1,17 +1,13 @@
 import React, { FC } from "react";
-import Footer from "../Footer";
-import Header from "../Header";
 import RegistrationForm from "./RegistrationForm";
-import style from "./RegistrationPage.module.scss";
+import PageWrapper from "../Common/PageWrapper";
 
 const RegistrationPage: FC = () => {
   return (
     <>
-      <div className={style["auth-page_wrapper"]}>
-        <Header />
+      <PageWrapper>
         <RegistrationForm />
-        <Footer />
-      </div>
+      </PageWrapper>
     </>
   );
 };
