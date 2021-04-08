@@ -7,6 +7,8 @@ const AuthForm: FC = () => {
   const [login, setLogin] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
+  
+
   return (
     <>
       <div className={style["auth-form_wrapper"]}>

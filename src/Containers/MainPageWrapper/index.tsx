@@ -1,6 +1,6 @@
 import React from "react";
-import Content from "../Content";
-import PageWrapper from "../Common/PageWrapper";
+import Content from "../../Components/Content";
+import PageWrapper from "../../Components/Common/PageWrapper";
 
 
 

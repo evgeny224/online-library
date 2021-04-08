@@ -1,0 +1,9 @@
+.slider-button{
+    border: none;
+    width: 50px;
+    background-color: rgb(173, 173, 173);
+    cursor: pointer;
+    &:focus{
+        outline: none;
+    }
+}
