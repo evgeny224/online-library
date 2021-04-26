@@ -1,4 +1,6 @@
 import React, { FC, useState } from "react";
+import { useDispatch } from "react-redux";
+import { userLoginAction } from "../../../store/actions";
 import PasswordInput from "../../Common/Forms/PasswordInput";
 import TextInput from "../../Common/Forms/TextInput";
 import style from "./AuthForm.module.scss";
@@ -8,6 +10,12 @@ const AuthForm: FC = () => {
   const [password, setPassword] = useState<string>("");
 
   
+  const dispatch = useDispatch();
+
+  const onSubmit = () => {
+    dispatch(userLoginAction)
+  }
+
 
   return (
     <>
