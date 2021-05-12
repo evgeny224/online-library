@@ -2,17 +2,22 @@ import React, { FC } from "react";
 import style from "./TextInput.module.scss";
 
 interface IProps {
-  setLogin: any;
+  formValue: any;
+  setFormValue: any;
+  formKey: string;
 }
 
 const TextInput: FC<IProps> = (props: IProps) => {
-  const { setLogin } = props;
+  const { formValue, setFormValue, formKey } = props;
   return (
     <>
       <input placeholder ="Логин"
         className={style.input}
         type="text"
-        onChange={(e) => setLogin(e.currentTarget.value)}
+        onChange={(e)=>
+          setFormValue({ ...formValue, [formKey]: e.currentTarget.value}) 
+          } 
+          value={formValue[formKey]}
       />
     </>
   );

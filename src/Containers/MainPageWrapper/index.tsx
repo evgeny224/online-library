@@ -5,9 +5,9 @@ import PageWrapper from "../../Components/Common/PageWrapper";
 
 
 
-class MainPageWrapper extends React.PureComponent {
+const MainPageWrapper = () => {
 
-    render(){
+
         return(
             <>
                 <PageWrapper>
@@ -15,7 +15,8 @@ class MainPageWrapper extends React.PureComponent {
                 </PageWrapper>
             </>
         );
-    }
-}
+    
+    };
+
 
 export default MainPageWrapper;

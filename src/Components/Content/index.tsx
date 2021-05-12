@@ -7,15 +7,15 @@ import style from "./Content.module.scss"
 
 
 
-class Content extends React.PureComponent {
+const Content = () => {
 
-    render(){
+    
         return(
             <>
                 <Slider />
             </>
         );
     }
-}
+
 
 export default Content;

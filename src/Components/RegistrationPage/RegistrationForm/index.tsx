@@ -5,24 +5,42 @@ import EmailInput from "../../Common/Forms/EmailInput"
 import style from "./RegistrationForm.module.scss";
 
 const RegistrationForm: FC = () => {
-  const [login, setLogin] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
+  const [formValue, setFormValue] = useState({
+    login: "",
+    email: "",
+    password: "",
+});
 
   return (
     <>
       <div className={style["reg-form_wrapper"]}>
         <form className={style.form}>
           <h1>Регистрация</h1>
-          <TextInput setLogin={setLogin} />
-          <PasswordInput setPassword={setPassword} />
-          <EmailInput setEmail={setEmail} />
+          <TextInput 
+            formKey="login"
+            formValue={formValue}
+            setFormValue={setFormValue}
+          />
+          <PasswordInput 
+            formKey="password"
+            formValue={formValue}
+            setFormValue={setFormValue}
+          />
+          <EmailInput  
+            formKey="email"
+            formValue={formValue}
+            setFormValue={setFormValue}
+          />
           <button
             className={style.button}
             type="button"
-            onClick={() =>
-              console.log({ login, password, email}, "Объект авторизации")
-            }>
+            onClick={()=>{
+              setFormValue({
+                  login: "",
+                  email: "",
+                  password: "",
+              });
+          }}>
             Отправить
           </button>
         </form>

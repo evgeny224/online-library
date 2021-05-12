@@ -1,20 +1,24 @@
 import React, { FC, useState } from "react";
 import { useDispatch } from "react-redux";
-import { userLoginAction } from "../../../store/actions";
+import { userLoginAction } from "../../../store/AuthPage/actions";
 import PasswordInput from "../../Common/Forms/PasswordInput";
 import TextInput from "../../Common/Forms/TextInput";
 import style from "./AuthForm.module.scss";
 
 const AuthForm: FC = () => {
-  const [login, setLogin] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
 
-  
-  const dispatch = useDispatch();
 
-  const onSubmit = () => {
-    dispatch(userLoginAction)
-  }
+  const [authFormValue, setAuthFormValue] = useState<any>({
+    login: "",
+    password: "",
+});
+
+const dispatch = useDispatch();
+
+const onSubmit = () => {
+    dispatch(userLoginAction(authFormValue.login));
+    setAuthFormValue({login: "", password: ""});
+};
 
 
   return (
@@ -22,14 +26,20 @@ const AuthForm: FC = () => {
       <div className={style["auth-form_wrapper"]}>
         <form className={style.form}>
           <h1>Авторизация</h1>
-          <TextInput setLogin={setLogin} />
-          <PasswordInput setPassword={setPassword} />
+          <TextInput
+            formValue={authFormValue}
+            setFormValue={setAuthFormValue}
+            formKey="login"
+          />
+          <PasswordInput  
+            formValue={authFormValue}
+            setFormValue={setAuthFormValue}
+            formKey="password"
+          />
           <button
             className={style.button}
             type="button"
-            onClick={() =>
-              console.log({ login, password }, "Объект авторизации")
-            }>
+            onClick={onSubmit}>
             Войти
           </button>
         </form>
