@@ -2,7 +2,7 @@ import { IMainPage } from "./types";
 import { MainPageActionType } from "./actions"
 
 const intialState: IMainPage = {
-    data: "",
+    data: [],
 };
 
 const mainPageReducer = (state=intialState, action: {type:string; payload?: any}) => {

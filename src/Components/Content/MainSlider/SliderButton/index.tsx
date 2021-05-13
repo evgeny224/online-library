@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import style from "./SliderButton.module.scss";
 
 interface IProps {
@@ -7,9 +7,9 @@ interface IProps {
 }
 
 
-class SliderButton extends React.PureComponent<IProps>{
-    render(){
-        const { handler,  discription } = this.props;
+    const SliderButton: FC<IProps> =(props: IProps)=>{
+
+        const { handler,  discription } = props;
         return (
             <>
                 <button
@@ -21,6 +21,6 @@ class SliderButton extends React.PureComponent<IProps>{
             </>
         );
     }
-}
+
 
 export default SliderButton;

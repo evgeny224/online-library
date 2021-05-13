@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import style from "./SliderItem.module.scss";
 
 interface IProps {
@@ -6,9 +6,9 @@ interface IProps {
     description: string;
 }
 
-class SliderItem extends React.PureComponent<IProps> {
-    render(){
-        const { link, description } = this.props;
+    const SliderItem: FC<IProps> = (props: IProps) => {
+
+        const { link, description } = props;
         return(
             <>
                 <div className={style["slider-item_wrapper"]}>
@@ -17,6 +17,6 @@ class SliderItem extends React.PureComponent<IProps> {
             </>
         );
     }
-}
+
 
 export default SliderItem;
